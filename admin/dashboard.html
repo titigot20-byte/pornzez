@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin — Gestion des vidéos</title>
+  <link rel="stylesheet" href="/admin-assets/css/admin.css" />
+</head>
+<body>
+  <header class="admin-header">
+    <div class="admin-header__inner">
+      <span class="logo">Admin · Vidéothèque</span>
+      <div class="admin-header__actions">
+        <a href="/" class="link" target="_blank">Voir le site</a>
+        <button id="logout-btn" class="btn btn--ghost btn--small">Déconnexion</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="admin-main">
+    <section class="upload-card">
+      <h2 class="section-title">Ajouter une vidéo</h2>
+      <form id="upload-form" class="upload-form">
+        <label class="field-label" for="title">Titre</label>
+        <input type="text" id="title" name="title" class="field-input" required />
+
+        <label class="field-label" for="description">Description (optionnelle)</label>
+        <textarea id="description" name="description" class="field-input" rows="3"></textarea>
+
+        <label class="field-label" for="video">Fichier vidéo (mp4, webm, ogg, mov)</label>
+        <input type="file" id="video" name="video" accept="video/mp4,video/webm,video/ogg,video/quicktime" required />
+
+        <div id="upload-progress" class="upload-progress hidden">
+          <div id="upload-progress-bar" class="upload-progress__bar"></div>
+        </div>
+
+        <p id="upload-error" class="login-error hidden"></p>
+        <p id="upload-success" class="upload-success hidden">Vidéo publiée avec succès.</p>
+
+        <button type="submit" id="upload-submit" class="btn btn--primary">Publier la vidéo</button>
+      </form>
+    </section>
+
+    <section class="videos-section">
+      <h2 class="section-title">Vidéos publiées</h2>
+      <div id="admin-video-list" class="admin-video-list"></div>
+      <p id="admin-empty-state" class="empty-state hidden">Aucune vidéo pour le moment.</p>
+    </section>
+  </main>
+
+  <script src="/admin-assets/js/dashboard.js"></script>
+</body>
+</html>

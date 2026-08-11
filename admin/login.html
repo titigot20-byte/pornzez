@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Connexion admin</title>
+  <link rel="stylesheet" href="/admin-assets/css/admin.css" />
+</head>
+<body>
+  <div class="login-wrap">
+    <form id="login-form" class="login-card">
+      <p class="login-card__eyebrow">Espace administrateur</p>
+      <h1 class="login-card__title">Connexion</h1>
+      <label class="field-label" for="password">Mot de passe</label>
+      <input type="password" id="password" name="password" class="field-input" autofocus required />
+      <p id="login-error" class="login-error hidden">Mot de passe incorrect.</p>
+      <button type="submit" class="btn btn--primary">Se connecter</button>
+    </form>
+  </div>
+  <script src="/admin-assets/js/login.js"></script>
+</body>
+</html>

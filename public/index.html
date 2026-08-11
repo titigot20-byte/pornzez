@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vidéothèque</title>
+  <link rel="stylesheet" href="/css/style.css" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9039964211290510"
+       crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <!-- Écran de vérification d'âge -->
+  <div id="age-gate" class="age-gate">
+    <div class="age-gate__panel">
+      <p class="age-gate__eyebrow">Accès restreint</p>
+      <h1 class="age-gate__title">Avez-vous 18 ans ou plus&nbsp;?</h1>
+      <p class="age-gate__text">
+        Ce site contient du contenu réservé aux adultes. En continuant, vous confirmez
+        avoir l'âge légal requis dans votre pays de résidence pour consulter ce type de contenu.
+      </p>
+      <div class="age-gate__actions">
+        <button id="age-yes" class="btn btn--primary">Oui, j'ai 18 ans ou plus</button>
+        <button id="age-no" class="btn btn--ghost">Non, quitter le site</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contenu du site (masqué tant que l'âge n'est pas confirmé) -->
+  <div id="site" class="site hidden">
+    <header class="header">
+      <div class="header__inner">
+        <span class="logo">Vidéothèque</span>
+      </div>
+    </header>
+
+    <!-- Emplacement publicitaire : à connecter toi-même au réseau de ton choix -->
+    <div id="ad-slot-top" class="ad-slot" aria-label="Emplacement publicitaire">
+      <ins class="adsbygoogle"
+           style="display:block; width:100%"
+           data-ad-client="ca-pub-9039964211290510"
+           data-ad-slot="REMPLACE_PAR_TON_ID_DE_BLOC_HAUT"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+    </div>
+
+    <main class="main">
+      <div id="video-grid" class="video-grid"></div>
+      <p id="empty-state" class="empty-state hidden">Aucune vidéo n'a encore été publiée.</p>
+    </main>
+
+    <div id="ad-slot-bottom" class="ad-slot" aria-label="Emplacement publicitaire">
+      <ins class="adsbygoogle"
+           style="display:block; width:100%"
+           data-ad-client="ca-pub-9039964211290510"
+           data-ad-slot="REMPLACE_PAR_TON_ID_DE_BLOC_BAS"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+    </div>
+
+    <footer class="site-footer">
+      <a href="__ADMIN_LOGIN_URL__" class="footer-admin-link" aria-label="Connexion">•</a>
+    </footer>
+  </div>
+
+  <!-- Lecteur vidéo en plein écran -->
+  <div id="player-overlay" class="player-overlay hidden">
+    <button id="player-close" class="player-close" aria-label="Fermer">×</button>
+    <div class="player-overlay__inner">
+      <video id="player-video" class="player-video" controls></video>
+      <h2 id="player-title" class="player-title"></h2>
+      <p id="player-description" class="player-description"></p>
+    </div>
+  </div>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>

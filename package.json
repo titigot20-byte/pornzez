@@ -1,0 +1,16 @@
+{
+  "name": "video-site",
+  "version": "1.0.0",
+  "description": "Site vidéo avec vérification d'âge et espace admin",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "express-session": "^1.18.0",
+    "multer": "^1.4.5-lts.1",
+    "dotenv": "^16.4.5",
+    "mongodb": "^6.5.0"
+  }
+}
